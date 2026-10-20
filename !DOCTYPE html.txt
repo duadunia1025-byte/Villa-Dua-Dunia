@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Dua Dunia - Services & Add-Ons</title>
+  <style>
+    :root {
+      --primary-blue: #1c3d5a;
+      --accent-gold: #c5a059;
+      --bg-light: #f9f9fb;
+      --text-dark: #2c3e50;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      margin: 0;
+      padding: 30px 15px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .lang-btn {
+      background: #fff;
+      border: 1px solid var(--accent-gold);
+      color: var(--primary-blue);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--accent-gold);
+      color: #fff;
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header-section h1 {
+      color: var(--primary-blue);
+      font-size: 2.2rem;
+      margin-bottom: 5px;
+    }
+
+    .header-section p {
+      color: var(--accent-gold);
+      font-size: 1.1rem;
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* Cards Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #eaeaea;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-badge {
+      align-self: flex-start;
+      background-color: var(--accent-gold);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: var(--primary-blue);
+      margin: 0 0 10px 0;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .card-price {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+    }
+
+    .btn-wa {
+      display: block;
+      text-align: center;
+      background-color: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-wa:hover {
+      background-color: #1eb853;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Language Switcher Bar -->
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLanguage('en')">EN 🇬🇧</button>
+    <button class="lang-btn" onclick="setLanguage('nl')">NL 🇳🇱</button>
+    <button class="lang-btn" onclick="setLanguage('id')">ID 🇮🇩</button>
+  </div>
+
+  <div class="header-section">
+    <h1>Villa Dua Dunia</h1>
+    <p>Where Two Worlds Meet — Balangan, Uluwatu</p>
+  </div>
+
+  <div class="card-grid">
+
+    <!-- Card 1: Day Tour -->
+    <div class="card">
+      <div class="card-body">
+        <span class="card-badge" id="badge-tour">Tours</span>
+        <h3 class="card-title" id="title-tour">Daily Tour Packages</h3>
+        <p class="card-text" id="desc-tour">Explore Uluwatu cliffs, Tanah Lot, and Ubud culture with our experienced local guide.</p>
+        <div class="card-price" id="price-tour">From IDR 500.000 / Day</div>
+        <a id="btn-tour" href="https://wa.me/6281234567890?text=Hello%20Villa%20Dua%20Dunia,%20I%20am%20interested%20in%20booking%20a%20Daily%20Tour." class="btn-wa" target="_blank">Book via WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Card 2: Scooter & Car Rental -->
+    <div class="card">
+      <div class="card-body">
+        <span class="card-badge" id="badge-rent">Rental</span>
+        <h3 class="card-title" id="title-rent">Scooter & Car Rental</h3>
+        <p class="card-text" id="desc-rent">Enjoy freedom around Balangan & Uluwatu beaches. Well-maintained fleet delivered straight to the villa.</p>
+        <div class="card-price" id="price-rent">From IDR 80.000 / Day</div>
+        <a id="btn-rent" href="https://wa.me/6281234567890?text=Hello%20Villa%20Dua%20Dunia,%20I%20would%20like%20to%20rent%20a%20Scooter/Car." class="btn-wa" target="_blank">Book via WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Card 3: Private Driver -->
+    <div class="card">
+      <div class="card-body">
+        <span class="card-badge" id="badge-driver">Transport</span>
+        <h3 class="card-title" id="title-driver">Private Driver</h3>
+        <p class="card-text" id="desc-driver">Reliable airport transfers and full-day comfortable chauffeur service across Bali.</p>
+        <div class="card-price" id="price-driver">From IDR 600.000 / 10 Hours</div>
+        <a id="btn-driver" href="https://wa.me/6281234567890?text=Hello%20Villa%20Dua%20Dunia,%20I%20need%20a%20Private%20Driver." class="btn-wa" target="_blank">Book via WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Card 4: Indonesia eSIM -->
+    <div class="card">
+      <div class="card-body">
+        <span class="card-badge" id="badge-esim">Connectivity</span>
+        <h3 class="card-title" id="title-esim">Indonesia Tourist eSIM</h3>
+        <p class="card-text" id="desc-esim">Stay connected with high-speed 4G/5G data across Indonesia. Instant digital setup before landing.</p>
+        <div class="card-price" id="price-esim">From IDR 150.000</div>
+        <a id="btn-esim" href="https://wa.me/6281234567890?text=Hello%20Villa%20Dua%20Dunia,%20I%20want%20to%20buy%20an%20eSIM." class="btn-wa" target="_blank">Book via WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const translations = {
+    en: {
+      tour: { badge: "Tours", title: "Daily Tour Packages", desc: "Explore Uluwatu cliffs, Tanah Lot, and Ubud culture with our experienced local guide.", price: "From IDR 500.000 / Day", btn: "Book via WhatsApp", waMsg: "Hello Villa Dua Dunia, I am interested in booking a Daily Tour." },
+      rent: { badge: "Rental", title: "Scooter & Car Rental", desc: "Enjoy freedom around Balangan & Uluwatu beaches. Well-maintained fleet delivered straight to the villa.", price: "From IDR 80.000 / Day", btn: "Book via WhatsApp", waMsg: "Hello Villa Dua Dunia, I would like to rent a Scooter/Car." },
+      driver: { badge: "Transport", title: "Private Driver", desc: "Reliable airport transfers and full-day comfortable chauffeur service across Bali.", price: "From IDR 600.000 / 10 Hours", btn: "Book via WhatsApp", waMsg: "Hello Villa Dua Dunia, I need a Private Driver service." },
+      esim: { badge: "Connectivity", title: "Indonesia Tourist eSIM", desc: "Stay connected with high-speed 4G/5G data across Indonesia. Instant digital setup before landing.", price: "From IDR 150.000", btn: "Book via WhatsApp", waMsg: "Hello Villa Dua Dunia, I want to purchase an Indonesia eSIM." }
+    },
+    nl: {
+      tour: { badge: "Tours", title: "Dagelijkse Touropties", desc: "Ontdek de kliffen van Uluwatu, Tanah Lot en de cultuur van Ubud met onze ervaren gids.", price: "Vanaf IDR 500.000 / Dag", btn: "Boek via WhatsApp", waMsg: "Hallo Villa Dua Dunia, ik wil graag een Dagtour boeken." },
+      rent: { badge: "Verhuur", title: "Scooter & Autoverhuur", desc: "Geniet van uw vrijheid rond Balangan & Uluwatu. Goed onderhouden voertuigen bij de villa geleverd.", price: "Vanaf IDR 80.000 / Dag", btn: "Boek via WhatsApp", waMsg: "Hallo Villa Dua Dunia, ik wil graag een Scooter/Auto huren." },
+      driver: { badge: "Vervoer", title: "Privéchauffeur", desc: "Betrouwbare luchthavenservice en comfortabel vervoer voor een hele dag door Bali.", price: "Vanaf IDR 600.000 / 10 Uur", btn: "Boek via WhatsApp", waMsg: "Hallo Villa Dua Dunia, ik heb een Privéchauffeur nodig." },
+      esim: { badge: "Internet", title: "Indonesië Toeristen eSIM", desc: "Blijf verbonden met snelle 4G/5G data. Direct digitale activatie voordat u op Bali landt.", price: "Vanaf IDR 150.000", btn: "Boek via WhatsApp", waMsg: "Hallo Villa Dua Dunia, ik wil een Indonesië eSIM kopen." }
+    },
+    id: {
+      tour: { badge: "Tur", title: "Paket Tur Harian", desc: "Jelajahi tebing Uluwatu, Pura Tanah Lot, hingga budaya Ubud bersama pemandu lokal berpengalaman.", price: "Mulai Rp 500.000 / Hari", btn: "Pesan via WhatsApp", waMsg: "Halo Villa Dua Dunia, saya tertarik pesan Paket Tur Harian." },
+      rent: { badge: "Sewa", title: "Rental Motor & Mobil", desc: "Nikmati kebebasan di pantai Balangan & Uluwatu. Armada terawat diantar langsung ke villa.", price: "Mulai Rp 80.000 / Hari", btn: "Pesan via WhatsApp", waMsg: "Halo Villa Dua Dunia, saya ingin menyewa Motor/Mobil." },
+      driver: { badge: "Transportasi", title: "Private Driver", desc: "Layanan antar-jemput bandara dan sopir pribadi nyaman seharian keliling Bali.", price: "Mulai Rp 600.000 / 10 Jam", btn: "Pesan via WhatsApp", waMsg: "Halo Villa Dua Dunia, saya butuh layanan Private Driver." },
+      esim: { badge: "Koneksi", title: "Indonesia Tourist eSIM", desc: "Tetap terhubung dengan internet 4G/5G cepat. Pengaktifan instan sebelum tiba di Bali.", price: "Mulai Rp 150.000", btn: "Pesan via WhatsApp", waMsg: "Halo Villa Dua Dunia, saya ingin membeli Indonesia eSIM." }
+    }
+  };
+
+  function setLanguage(lang) {
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    const phone = "6281234567890"; // Ganti dengan nomor WhatsApp resmi Villa Dua Dunia
+
+    ['tour', 'rent', 'driver', 'esim'].forEach(item => {
+      document.getElementById(`badge-${item}`).innerText = translations[lang][item].badge;
+      document.getElementById(`title-${item}`).innerText = translations[lang][item].title;
+      document.getElementById(`desc-${item}`).innerText = translations[lang][item].desc;
+      document.getElementById(`price-${item}`).innerText = translations[lang][item].price;
+      
+      const btn = document.getElementById(`btn-${item}`);
+      btn.innerText = translations[lang][item].btn;
+      btn.href = `https://wa.me/${phone}?text=${encodeURIComponent(translations[lang][item].waMsg)}`;
+    });
+  }
+</script>
+
+</body>
+</html>
