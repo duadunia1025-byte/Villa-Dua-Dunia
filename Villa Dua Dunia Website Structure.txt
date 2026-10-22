@@ -1,0 +1,32 @@
+Villa Dua Dunia Website Structure
+│
+├── Language Selector (EN | NL | ID)
+│
+├── 1. Home / Beranda / Startpagina
+│   ├── Hero Banner & Tagline ("Where Two Worlds Meet")
+│   ├── Direct Booking Search Bar (Tanggal & Jumlah Tamu)
+│   ├── Villa Overview & Highlight (Balangan Beach, Uluwatu)
+│   ├── Add-Ons Showcase (Tur, Sewa Kendaraan, Driver, eSIM)
+│   └── Guest Reviews / Testimonials
+│
+├── 2. Accommodation / Accommodatie / Akomodasi
+│   ├── Detail Villa & Fasilitas (Private Pool, Garden, Living Area)
+│   ├── Galeri Foto & Virtual Tour
+│   └── Integrasi WP Booking System / Widget Kalender
+│
+├── 3. Services & Add-Ons / Diensten & Extra's / Layanan & Pengalaman
+│   ├── Day Tours / Dag tours / Paket Tur Harian
+│   ├── Scooter & Car Rental / Scooter & Autoverhuur / Sewa Motor & Mobil
+│   ├── Private Driver / Privéchauffeur / Sopir Pribadi
+│   └── Indonesia eSIM Roaming / Tourist eSIM
+│
+├── 4. Location & Area Guide / Locatie & Gids / Lokasi & Panduan Wisata
+│   ├── Balangan & Uluwatu Attractions (Surfing, Uluwatu Temple, Sunset spots)
+│   └── Airport Transfer & Directions
+│
+├── 5. About Us / Over Ons / Tentang Kami
+│   └── Philosophy: "Where Two Worlds Meet"
+│
+└── 6. Contact & Reservations / Contact / Kontak
+    ├── Booking Form / Form Reservasi
+    └── Live WhatsApp Floating Chat
